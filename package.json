@@ -1,0 +1,12 @@
+{
+  "name": "dast-example",
+  "version": "1.0.0",
+  "description": "A vulnerable web app for DAST testing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

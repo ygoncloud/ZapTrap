@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  webapp:
+    build: .
+    image: dast-example-app
+    container_name: dast-example-app
+    ports:
+      - "3000:3000"
+
+  zap:
+    image: zaproxy/zap-stable
+    container_name: zap
+    command: zap-full-scan.py -t http://webapp:3000 -r report.html
+    volumes:
+      - ./zap-report:/zap/wrk/:rw
+    depends_on:
+      - webapp
