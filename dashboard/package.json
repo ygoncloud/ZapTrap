@@ -1,0 +1,12 @@
+{
+  "name": "zaptrap-dashboard",
+  "version": "1.0.0",
+  "description": "A dashboard for ZAP reports",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

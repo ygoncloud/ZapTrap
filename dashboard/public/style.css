@@ -1,0 +1,103 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #eef2f7;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+#summary {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#summary p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #555;
+}
+
+.chart-container {
+  width: 50%; /* Adjusted size */
+  max-width: 600px; /* Max width to prevent excessive growth */
+  margin: 0 auto 40px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+#alerts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.alert {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.alert:hover {
+  transform: translateY(-5px);
+}
+
+.alert h3 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #e74c3c; /* Red for alerts */
+  margin-bottom: 10px;
+}
+
+.alert p {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+.alert p strong {
+  color: #444;
+}
+
+/* Specific colors for risk levels */
+.risk-High {
+  color: #e74c3c;
+}
+.risk-Medium {
+  color: #f39c12;
+}
+.risk-Low {
+  color: #2ecc71;
+}
+.risk-Informational {
+  color: #3498db;
+}

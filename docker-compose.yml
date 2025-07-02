@@ -10,8 +10,17 @@ services:
   zap:
     image: zaproxy/zap-stable
     container_name: zap
-    command: zap-full-scan.py -t http://webapp:3000 -r report.html
+    command: ["zap-full-scan.py", "-t", "http://webapp:3000", "-r", "report.html", "-J", "report.json"]
     volumes:
       - ./zap-report:/zap/wrk/:rw
     depends_on:
       - webapp
+
+  dashboard:
+    build: ./dashboard
+    image: zaptrap-dashboard
+    container_name: zaptrap-dashboard
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./zap-report:/app/zap-report:ro
